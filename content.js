@@ -1,6 +1,5 @@
 window.addEventListener('load', (event) => {
   const anchorElements = document.querySelectorAll('a[href^="https://solscan.io/token/"]');
-  const rugcheckBaseUrl = "https://rugcheck.xyz/tokens/";
   if (anchorElements.length > 0) {
     anchorElements.forEach((anchorElement) => {
       const url = anchorElement.getAttribute('href');
