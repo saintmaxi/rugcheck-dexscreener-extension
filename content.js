@@ -22,12 +22,15 @@ window.addEventListener('load', (event) => {
           newAnchor.style.fontSize = '1.25em';
           newAnchor.style.color = 'black';
           newAnchor.style.fontWeight = 'bold';
+          newAnchor.style.border = 'solid 4px black';
+          newAnchor.style.transition = 'all 200ms';
+
           newAnchor.addEventListener('mouseenter', () => {
-            newAnchor.style.opacity = '0.8';
+            newAnchor.style.backgroundColor = 'lightgray';
           });
 
           newAnchor.addEventListener('mouseleave', () => {
-            newAnchor.style.opacity = '1';
+            newAnchor.style.backgroundColor = 'white';
           });
 
           document.body.appendChild(newAnchor);
