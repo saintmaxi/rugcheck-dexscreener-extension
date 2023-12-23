@@ -15,3 +15,6 @@ Or, click the Chrome menu, hover over More Tools, then select Extensions.
 2. Enable Developer Mode by clicking the toggle switch next to Developer mode.
 
 3. Click the Load unpacked button and select the extension directory i.e. the unzipped file
+
+
+![Widget screenshot](https://github.com/saintmaxi/anonymice/blob/ee3ebab180b79d19cbadd455c6c73d046fec3c47/Rugcheck%20Dexscreener%20Extension.png?raw=true)
