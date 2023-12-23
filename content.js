@@ -24,6 +24,7 @@ window.addEventListener('load', (event) => {
           newAnchor.style.fontWeight = 'bold';
           newAnchor.style.border = 'solid 4px black';
           newAnchor.style.transition = 'all 200ms';
+          newAnchor.style.borderTopLeftRadius = '1em';
 
           newAnchor.addEventListener('mouseenter', () => {
             newAnchor.style.backgroundColor = 'lightgray';
