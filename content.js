@@ -44,12 +44,11 @@ function addRugcheckLink() {
             widgetButtonContainer.style.alignItems = 'center';
             widgetButtonContainer.style.minHeight = '5vh';
 
-
-            rugcheckIframe.id = "rugcheck-dexscreener-widget";
             rugcheckIframe.src = `https://rugcheck.xyz/tokens/${token}`;
             rugcheckIframe.style.width = '100%';
             rugcheckIframe.style.height = '100%';
 
+            widgetContainer.id = "rugcheck-dexscreener-widget";
             widgetContainer.style.position = 'fixed';
             widgetContainer.style.width = '33vw';
             widgetContainer.style.height = '45vh';
@@ -79,11 +78,11 @@ function addRugcheckLink() {
 
 
             collapseButton.addEventListener('mouseenter', () => {
-              refreshButton.style.backgroundColor = "gray"
+              collapseButton.style.backgroundColor = "gray"
             });
 
             collapseButton.addEventListener('mouseleave', () => {
-              refreshButton.style.backgroundColor = "black"
+              collapseButton.style.backgroundColor = "black"
             });
 
             collapseButton.addEventListener('click', () => {
