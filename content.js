@@ -51,13 +51,11 @@ window.addEventListener('load', () => {
   let url = window.location.href;
   addRugcheckLink();
 
-
   document.body.addEventListener('click', () => {
     requestAnimationFrame(() => {
       if (url !== window.location.href) {
         url = location.href
         addRugcheckLink();
-
       }
     });
   }, true);
