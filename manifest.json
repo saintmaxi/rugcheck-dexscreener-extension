@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Dexscreener Rugcheck Extension",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://dexscreener.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://dexscreener.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
