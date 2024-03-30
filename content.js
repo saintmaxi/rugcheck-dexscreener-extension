@@ -16,6 +16,7 @@ function addRugcheckLink() {
             const widgetContainer = document.createElement('div');
             const widgetButtonContainer = document.createElement('div');
             const refreshButton = document.createElement('button')
+	      		const closeButton = document.createElement('button');
             const collapseButton = document.createElement('button')
             const titleSpan = document.createElement('span')
 
@@ -37,7 +38,16 @@ function addRugcheckLink() {
             collapseButton.style.fontWeight = 'bold';
             collapseButton.style.padding = '.25rem';
             collapseButton.style.transition = 'all 100ms';
-
+            
+            closeButton.textContent = 'Close ❌';
+            closeButton.style.backgroundColor = 'black';
+            closeButton.style.border = 'solid 1px white';
+            closeButton.style.color = 'white'; // This line was missing to set the text color
+            closeButton.style.fontWeight = 'bold';
+            closeButton.style.padding = '.25rem';
+            closeButton.style.transition = 'all 100ms'; 
+			
+			
             widgetButtonContainer.style.display = 'flex';
             widgetButtonContainer.style.gap = '1em';
             widgetButtonContainer.style.flexDirection = 'row';
@@ -64,7 +74,7 @@ function addRugcheckLink() {
             widgetButtonContainer.appendChild(titleSpan);
             widgetButtonContainer.appendChild(refreshButton);
             widgetButtonContainer.appendChild(collapseButton);
-
+            widgetButtonContainer.appendChild(closeButton);
             widgetContainer.appendChild(widgetButtonContainer)
             widgetContainer.appendChild(rugcheckIframe)
 
@@ -84,7 +94,18 @@ function addRugcheckLink() {
             collapseButton.addEventListener('mouseleave', () => {
               collapseButton.style.backgroundColor = "black"
             });
+            closeButton.addEventListener('mouseenter', () => {
+              closeButton.style.backgroundColor = "gray"
+            }
+            );
+            closeButton.addEventListener('mouseleave', () => {
+              closeButton.style.backgroundColor = "black"
+            } 
+            );
 
+            closeButton.addEventListener('click', () => {
+              widgetContainer.remove(); // This will remove the widgetContainer from the document
+            });
             collapseButton.addEventListener('click', () => {
               if (showWidget) {
                 collapseButton.textContent = 'Show ⬆️';
