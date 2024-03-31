@@ -17,6 +17,7 @@ function addRugcheckLink() {
             const widgetButtonContainer = document.createElement('div');
             const refreshButton = document.createElement('button')
 	      		const closeButton = document.createElement('button');
+            const birdeyeButton = document.createElement('button');
             const collapseButton = document.createElement('button')
             const titleSpan = document.createElement('span')
 
@@ -39,6 +40,14 @@ function addRugcheckLink() {
             collapseButton.style.padding = '.25rem';
             collapseButton.style.transition = 'all 100ms';
             
+            birdeyeButton.textContent = 'Open in birdeye 🦅';
+            birdeyeButton.style.backgroundColor = 'black';
+            birdeyeButton.style.border = 'solid 1px white';
+            birdeyeButton.style.fontWeight = 'bold';
+            birdeyeButton.style.padding = '.25rem';
+            birdeyeButton.style.transition = 'all 100ms';
+            birdeyeButton.style.color = 'white';
+
             closeButton.textContent = 'Close ❌';
             closeButton.style.backgroundColor = 'black';
             closeButton.style.border = 'solid 1px white';
@@ -74,6 +83,7 @@ function addRugcheckLink() {
             widgetButtonContainer.appendChild(titleSpan);
             widgetButtonContainer.appendChild(refreshButton);
             widgetButtonContainer.appendChild(collapseButton);
+            widgetButtonContainer.appendChild(birdeyeButton);
             widgetButtonContainer.appendChild(closeButton);
             widgetContainer.appendChild(widgetButtonContainer)
             widgetContainer.appendChild(rugcheckIframe)
@@ -106,6 +116,11 @@ function addRugcheckLink() {
             closeButton.addEventListener('click', () => {
               widgetContainer.remove(); // This will remove the widgetContainer from the document
             });
+           
+            birdeyeButton.addEventListener('click', () => {
+              window.open(`https://birdeye.so/token/${token}?chain=solana`, 'birdeyeWindow${token}', 'width=1920,height=1080,left=0,top=0');
+            });
+
             collapseButton.addEventListener('click', () => {
               if (showWidget) {
                 collapseButton.textContent = 'Show ⬆️';
